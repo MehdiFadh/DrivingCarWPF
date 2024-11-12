@@ -1,0 +1,52 @@
+﻿<Window x:Class="DrivingCarWPF.Luncher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrivingCarWPF"
+        mc:Ignorable="d"
+        
+        WindowStartupLocation="CenterScreen"
+        Title="Accueil" Height="450" Width="800">
+
+    <Grid>
+        <Canvas x:Name="canvasAccueil">
+            
+
+            <Button x:Name="buttonJouer" Content="Jouer" Canvas.Left="597" Canvas.Top="308" Height="57" Width="115" Background="#FFBCFF00" FontWeight="Bold" FontSize="24" FontFamily="Harlow Solid Italic" Click="buttonJouer_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,0,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button x:Name="buttonAnnuler" Content="Annuler" Canvas.Left="477" Canvas.Top="318" Height="57" Width="115" Background="Red" FontWeight="Bold" FontSize="24" FontFamily="Harlow Solid Italic" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="buttonAnnuler_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Label x:Name="nomJeux" Content="Driving Car" Canvas.Left="10" Canvas.Top="10" FontSize="48" FontFamily="72 Black" Foreground="White" FontWeight="Bold"/>
+
+            <Button x:Name="butParametre" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="25" Canvas.Left="746" Canvas.Top="18" Click="butParametre_Click"/>
+
+            <Rectangle Height="250" Canvas.Left="54" Canvas.Top="130" Width="379" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.8">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFCFCFCF" Offset="0"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <ScrollViewer Height="210" Width="337" HorizontalAlignment="Left" Canvas.Left="75" VerticalAlignment="Center" Canvas.Top="155">
+                <TextBlock TextWrapping="Wrap" Height="328" TextAlignment="Justify" FontSize="16" FontFamily="Arial" FontWeight="Bold"><Run Text="Bienvenue dans Driving Car. "/><LineBreak/><Run/><LineBreak/><Run Text="Explorez une nouvelle dimension de conduite avec notre application de voiture."/><Run Text=" "/><LineBreak/><Run/><Run/><LineBreak/><Run Text="Profitez d'une expérience de conduite simplifiée qui transforme chaque trajet en une aventure unique. "/><LineBreak/><Run/><LineBreak/><Run Text="Cliquer sur l'icône 🛠️ "/><Run Language="fr-fr" Text="en au à droite "/><Run Text="pour voir les commandes "/><Run Language="fr-fr" Text="de jeux"/><Run Text="."/></TextBlock>
+
+
+            </ScrollViewer>
+        </Canvas>
+    </Grid>
+</Window>
